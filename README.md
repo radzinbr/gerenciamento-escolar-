@@ -65,23 +65,23 @@ Criar uma aplicação simples, organizada e escalável para:
 
 ---
 
-#PADRÃO DE COMMITS
+# PADRÃO DE COMMITS
 
--Todos os commits devem seguir o padrão:
+- Todos os commits devem seguir o padrão:
 
--tipo: descrição
+- tipo: descrição
 
 ## Exemplos:
 
--feat: adiciona cadastro de professores
--feat: implementa tela de turmas
--fix: corrige erro na exclusão de alunos
--refactor: reorganiza serviço de professores
--docs: atualiza documentação do projeto
--test: adiciona testes para cadastro de alunos
--chore: atualiza dependências do projeto
-
-##Regras:
+- feat: adiciona cadastro de professores
+- feat: implementa tela de turmas
+- fix: corrige erro na exclusão de alunos
+- refactor: reorganiza serviço de professores
+- docs: atualiza documentação do projeto
+- test: adiciona testes para cadastro de alunos
+- chore: atualiza dependências do projeto
+ 
+## Regras:
 - Utilizar letras minúsculas no tipo.
 - Escrever a descrição de forma curta e objetiva.
 - Utilizar verbo no presente.
