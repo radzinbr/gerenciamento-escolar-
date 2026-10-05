@@ -63,7 +63,7 @@ Criar uma aplicação simples, organizada e escalável para:
 
 ---
 
----
+
 
 # PADRÃO DE COMMITS
 
