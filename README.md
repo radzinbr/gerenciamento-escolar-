@@ -88,3 +88,43 @@ Criar uma aplicação simples, organizada e escalável para:
 - Não colocar ponto final.
 - Evitar commits genéricos como "update", "alterações" ou "coisas".
 ---
+
+---
+
+# Estrutura do Projeto
+
+```txt
+sistema/
+│
+│── public/
+│   ├── Components/
+│   │     ├── footer.html
+│   │     └──navbar.html
+│   │
+│   │── css/
+│   │   └── style.css
+│   │
+│   │── js/
+│   │   ├── alunos.js
+│   │   ├── utils.js
+│   │   └── api.js
+│   │
+│   └── pages/
+│       ├── alunos.html
+│       ├── dashboard.html
+│       └── login.html
+│
+├── Server/
+│     ├── controllers/
+│     ├── database/
+│     │    └──db.js
+│     ├── models/
+│     ├── routes/
+│     │     └──alunosRoutes.js
+│     └── app.js
+│
+│── package.json
+└── README.md
+```
+
+---
