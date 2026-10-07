@@ -211,3 +211,290 @@ a {
 
     font-size: 11px;
 }
+
+/* ==============================
+   DASHBOARD
+   ============================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.dashboard-card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+
+.dashboard-card-title {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.dashboard-card-value {
+    margin: 2px 0;
+
+    font-size: 26px;
+}
+
+
+/* ==============================
+   PAINÉIS
+   ============================== */
+
+.dashboard-panel {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+
+.dashboard-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* ==============================
+   GRÁFICO
+   ============================== */
+
+.frequency-placeholder {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #9ca3af;
+}
+
+
+.frequency-placeholder i {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+.frequency-placeholder p {
+    margin-bottom: 4px;
+
+    font-weight: 600;
+}
+
+
+/* ==============================
+   AÇÕES RÁPIDAS
+   ============================== */
+
+.quick-actions {
+    padding: 8px 12px;
+}
+
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 8px;
+
+    color: #374151;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    transition: 0.2s;
+}
+
+
+.quick-action:last-child {
+    border-bottom: none;
+}
+
+
+.quick-action i:first-child {
+    width: 22px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+
+.quick-action span {
+    flex: 1;
+
+    font-size: 14px;
+}
+
+
+.quick-action:hover {
+    color: #2563eb;
+
+    background-color: #f8fafc;
+}
+
+
+/* ==============================
+   TABELA
+   ============================== */
+
+.dashboard-panel .table {
+    margin: 0;
+}
+
+
+.dashboard-panel .table th {
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.dashboard-panel .table td {
+    font-size: 14px;
+}
+
+/* ==============================
+   PÁGINAS INTERNAS
+   ============================== */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   ESTADO VAZIO
+   ============================== */
+
+.empty-state {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+
+.empty-state > i {
+    font-size: 45px;
+    color: #9ca3af;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-state h6 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.empty-state p {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
