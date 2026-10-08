@@ -37,9 +37,19 @@ require_once __DIR__ . '/../../config/config.php';
 
     <!-- CSS do sistema -->
     <link
-        rel="stylesheet"
-        href="<?= BASE_URL ?>/assets/css/style.css"
-    >
+    rel="stylesheet"
+    href="<?= BASE_URL ?>/assets/css/style.css?v=<?= time() ?>"
+>
+   <!-- versao final do css 
+    
+    <link
+    rel="stylesheet"
+    href="<?= BASE_URL ?>/assets/css/style.css?v=1.0.1"
+>
+   
+   
+   -->
+
 
 </head>
 

@@ -464,6 +464,130 @@ a {
 .empty-state p {
     font-size: 14px;
 }
+/* ==============================
+   IMPORTAÇÃO DE PDF
+   ============================== */
+
+.import-steps {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+
+.import-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #9ca3af;
+}
+
+
+.import-step.active {
+    color: #2563eb;
+}
+
+
+.import-step-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #e5e7eb;
+
+    font-weight: 600;
+}
+
+
+.import-step.active .import-step-number {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+
+.import-step strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.import-step small {
+    display: block;
+
+    font-size: 11px;
+}
+
+
+.pdf-upload-area {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+
+    background-color: #f9fafb;
+
+    transition: 0.2s;
+}
+
+
+.pdf-upload-area:hover {
+    border-color: #2563eb;
+    background-color: #f8faff;
+}
+
+
+.pdf-upload-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    background-color: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 35px;
+}
+
+
+.pdf-upload-area h5 {
+    margin-bottom: 8px;
+}
+
+
+.pdf-upload-area p {
+    max-width: 450px;
+}
+
 
 
 /* ==============================
@@ -497,4 +621,97 @@ a {
         gap: 10px;
     }
 
+}
+
+/* ==============================
+   REVISÃO DE IMPORTAÇÃO
+   ============================== */
+
+.import-step.completed {
+    color: #16a34a;
+}
+
+.import-step.completed .import-step-number {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   RESUMO DA IMPORTAÇÃO
+   ============================== */
+
+.import-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+
+.import-summary-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: #dbeafe;
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+.import-summary-icon.success {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+
+.import-summary-icon.warning {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+
+.import-summary-card small {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.import-summary-card strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 22px;
+}
+
+
+/* ==============================
+   RODAPÉ DA IMPORTAÇÃO
+   ============================== */
+
+.import-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+
+    border-top: 1px solid #e5e7eb;
 }

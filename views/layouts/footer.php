@@ -5,7 +5,7 @@
 
 <!-- JavaScript do sistema -->
 <script
-    src="<?= BASE_URL ?>/assets/js/app.js">
+    src="<?= BASE_URL ?>/assets/js/app.js?v=<?= time() ?>">
 </script>
 
 </body>
