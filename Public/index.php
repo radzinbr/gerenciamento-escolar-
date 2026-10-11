@@ -130,7 +130,7 @@ include __DIR__ . '/../views/layouts/sidebar.php';
                         </span>
 
                         <h3 class="dashboard-card-value">
-                            0
+                            s
                         </h3>
 
                         <small class="text-muted">
