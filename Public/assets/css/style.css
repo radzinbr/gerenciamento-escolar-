@@ -1,0 +1,717 @@
+/* ==============================
+   RESET / CONFIGURAÇÕES GERAIS
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #212529;
+}
+
+/* Remove decoração dos links */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+.content {
+    min-height: 100vh;
+    padding: 30px;
+
+    margin-left: 260px;
+}
+
+/* ==============================
+   SIDEBAR
+   ============================== */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    background-color: #111827;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+}
+
+
+/* ==============================
+   HEADER DA SIDEBAR
+   ============================== */
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 24px 20px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-logo {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2563eb;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.sidebar-header h5 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.sidebar-header small {
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+/* ==============================
+   MENU
+   ============================== */
+
+.sidebar-menu {
+    flex: 1;
+
+    padding: 20px 12px;
+
+    overflow-y: auto;
+}
+
+.menu-title {
+    display: block;
+
+    margin: 18px 12px 8px;
+
+    color: #6b7280;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.menu-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 14px;
+
+    margin-bottom: 4px;
+
+    color: #9ca3af;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item i {
+    width: 20px;
+
+    font-size: 17px;
+
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+
+    color: #ffffff;
+}
+
+.menu-item.active {
+    background-color: #2563eb;
+
+    color: #ffffff;
+}
+
+
+/* ==============================
+   USUÁRIO
+   ============================== */
+
+.sidebar-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 16px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #2563eb;
+
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.user-info strong {
+    font-size: 13px;
+}
+
+.user-info small {
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+/* ==============================
+   DASHBOARD
+   ============================== */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.dashboard-card-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+
+.dashboard-card-title {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.dashboard-card-value {
+    margin: 2px 0;
+
+    font-size: 26px;
+}
+
+
+/* ==============================
+   PAINÉIS
+   ============================== */
+
+.dashboard-panel {
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+
+.dashboard-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* ==============================
+   GRÁFICO
+   ============================== */
+
+.frequency-placeholder {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #9ca3af;
+}
+
+
+.frequency-placeholder i {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+.frequency-placeholder p {
+    margin-bottom: 4px;
+
+    font-weight: 600;
+}
+
+
+/* ==============================
+   AÇÕES RÁPIDAS
+   ============================== */
+
+.quick-actions {
+    padding: 8px 12px;
+}
+
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 8px;
+
+    color: #374151;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    transition: 0.2s;
+}
+
+
+.quick-action:last-child {
+    border-bottom: none;
+}
+
+
+.quick-action i:first-child {
+    width: 22px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+}
+
+
+.quick-action span {
+    flex: 1;
+
+    font-size: 14px;
+}
+
+
+.quick-action:hover {
+    color: #2563eb;
+
+    background-color: #f8fafc;
+}
+
+
+/* ==============================
+   TABELA
+   ============================== */
+
+.dashboard-panel .table {
+    margin: 0;
+}
+
+
+.dashboard-panel .table th {
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.dashboard-panel .table td {
+    font-size: 14px;
+}
+
+/* ==============================
+   PÁGINAS INTERNAS
+   ============================== */
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   ESTADO VAZIO
+   ============================== */
+
+.empty-state {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+
+.empty-state > i {
+    font-size: 45px;
+    color: #9ca3af;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-state h6 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.empty-state p {
+    font-size: 14px;
+}
+/* ==============================
+   IMPORTAÇÃO DE PDF
+   ============================== */
+
+.import-steps {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+
+.import-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #9ca3af;
+}
+
+
+.import-step.active {
+    color: #2563eb;
+}
+
+
+.import-step-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #e5e7eb;
+
+    font-weight: 600;
+}
+
+
+.import-step.active .import-step-number {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+
+.import-step strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+
+.import-step small {
+    display: block;
+
+    font-size: 11px;
+}
+
+
+.pdf-upload-area {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+
+    background-color: #f9fafb;
+
+    transition: 0.2s;
+}
+
+
+.pdf-upload-area:hover {
+    border-color: #2563eb;
+    background-color: #f8faff;
+}
+
+
+.pdf-upload-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    background-color: #fee2e2;
+
+    color: #dc2626;
+
+    font-size: 35px;
+}
+
+
+.pdf-upload-area h5 {
+    margin-bottom: 8px;
+}
+
+
+.pdf-upload-area p {
+    max-width: 450px;
+}
+
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+}
+
+/* ==============================
+   REVISÃO DE IMPORTAÇÃO
+   ============================== */
+
+.import-step.completed {
+    color: #16a34a;
+}
+
+.import-step.completed .import-step-number {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+
+/* ==============================
+   RESUMO DA IMPORTAÇÃO
+   ============================== */
+
+.import-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+
+.import-summary-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background-color: #dbeafe;
+    color: #2563eb;
+
+    font-size: 20px;
+}
+
+
+.import-summary-icon.success {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+
+.import-summary-icon.warning {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+
+.import-summary-card small {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+.import-summary-card strong {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 22px;
+}
+
+
+/* ==============================
+   RODAPÉ DA IMPORTAÇÃO
+   ============================== */
+
+.import-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 20px;
+
+    border-top: 1px solid #e5e7eb;
+}
