@@ -35,6 +35,7 @@ try {
 
     $turmas = $stmtTurmas->fetchAll();
 
+<<<<<<< HEAD
    // Monta a consulta de alunos.
 $sql = "
     SELECT
@@ -54,6 +55,26 @@ $sql = "
     WHERE 1 = 1
         AND a.excluido_em IS NULL
 ";
+=======
+    // Monta a consulta de alunos.
+    $sql = "
+        SELECT
+            a.id,
+            a.matricula,
+            a.nome_completo,
+            a.data_nascimento,
+            a.status,
+            t.nome AS turma_nome
+        FROM alunos a
+        LEFT JOIN matriculas m
+            ON m.aluno_id = a.id
+            AND m.ano_letivo = YEAR(CURDATE())
+            AND m.status = 'ativa'
+        LEFT JOIN turmas t
+            ON t.id = m.turma_id
+        WHERE 1 = 1
+    ";
+>>>>>>> 5248147c2fd061e17af26d41c118153a0d44fe7a
 
     $params = [];
 

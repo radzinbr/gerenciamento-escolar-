@@ -33,7 +33,10 @@ try {
             p.status
         FROM professores p
         WHERE 1 = 1
+<<<<<<< HEAD
         AND excluido_em IS NULL
+=======
+>>>>>>> 5248147c2fd061e17af26d41c118153a0d44fe7a
     ";
 
     $parametros = [];

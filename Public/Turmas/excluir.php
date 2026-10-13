@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $turma && $pdo) {
         $erro = 'Sessão inválida. Atualize a página e tente novamente.';
     } else {
         try {
+<<<<<<< HEAD
            $stmt = $pdo->prepare(
                 'UPDATE turmas
                 SET excluido_em = CURRENT_TIMESTAMP
@@ -66,6 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $turma && $pdo) {
 
 $stmt->execute(['id' => $id]);
 
+=======
+            $stmt = $pdo->prepare(
+                "DELETE FROM turmas WHERE id = :id"
+            );
+
+>>>>>>> 5248147c2fd061e17af26d41c118153a0d44fe7a
             $stmt->execute(['id' => $id]);
 
             if ($stmt->rowCount() === 0) {

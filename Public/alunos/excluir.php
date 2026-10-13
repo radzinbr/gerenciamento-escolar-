@@ -19,12 +19,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $database = new Database();
         $pdo = $database->connect();
 
+<<<<<<< HEAD
          $stmt = $pdo->prepare(
             'UPDATE alunos
             SET excluido_em = CURRENT_TIMESTAMP
             WHERE id = :id
             AND excluido_em IS NULL'
         );
+=======
+        $sql = 'DELETE FROM alunos WHERE id = :id';
+        $stmt = $pdo->prepare($sql);
+>>>>>>> 5248147c2fd061e17af26d41c118153a0d44fe7a
         $stmt->execute(['id' => $id]);
 
         if ($stmt->rowCount() > 0) {
